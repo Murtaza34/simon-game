@@ -142,6 +142,7 @@ footer a {
   }
 
   .title {
+    padding-top: 1rem;
     font-size: 4rem;
     line-height: 3.3rem;
   }
