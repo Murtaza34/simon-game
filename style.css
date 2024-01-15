@@ -142,13 +142,13 @@ footer a {
   }
 
   .title {
-    font-size: 6rem;
-    line-height: 2rem;
+    font-size: 4rem;
+    line-height: 3.3rem;
   }
 
   .sub-heading {
-    font-size: 1.6rem;
-    line-height: 1.5rem;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
     padding: 0 1.5rem;
   }
 
@@ -168,11 +168,7 @@ footer a {
   }
 }
 
-@media (max-width: 830px) {
-  body {
-    padding: 0 2rem 0 2rem;
-  }
-
+/* @media (max-width: 830px) {
   .title {
     line-height: 6rem;
   }
@@ -191,4 +187,4 @@ footer a {
   footer {
     position: relative;
   }
-}
+} */
