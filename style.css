@@ -172,29 +172,4 @@ footer a {
   }
 }
 
-/* width: 100%;
-  padding-right: $padding-x;
-  padding-left: $padding-x;
-  margin-right: auto;
-  margin-left: auto; */
 
-/* @media (max-width: 830px) {
-  .title {
-    line-height: 6rem;
-  }
-
-  .sub-heading {
-    padding: 0 1.5rem;
-  }
-
-  .grid-container {
-    width: 100%;
-    gap: 2rem;
-    padding: 1.6rem;
-    margin-bottom: 7rem;
-  }
-
-  footer {
-    position: relative;
-  }
-} */
