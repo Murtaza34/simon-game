@@ -58,24 +58,30 @@ body {
   text-align: center;
 }
 
-.grid-container {
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.grid {
   width: 600px;
   aspect-ratio: 1;
   display: grid;
   grid-template: 1fr 1fr / 1fr 1fr;
   gap: 2rem;
   padding: 1.6rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
   background-color: rgb(238, 238, 238);
   border-radius: 2rem;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px,
     rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 
-.grid-container .item {
+.grid .item {
   border: none;
   height: 100%;
   aspect-ratio: 1;
@@ -85,10 +91,10 @@ body {
   transition: all ease 0.07s;
 }
 
-.grid-container .item:hover {
+.grid .item:hover {
   cursor: pointer;
 }
-.grid-container .item:active {
+.grid .item:active {
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
 }
@@ -137,10 +143,6 @@ footer a {
 
 /* ------------------  ------------------ */
 @media (max-width: 576px) {
-  body {
-    padding: 0 1rem 0 1rem;
-  }
-
   .title {
     padding-top: 1rem;
     font-size: 4rem;
@@ -153,7 +155,7 @@ footer a {
     padding: 0 1.5rem;
   }
 
-  .grid-container {
+  .grid {
     width: 100%;
     gap: 1rem;
     padding: 1rem;
@@ -168,6 +170,12 @@ footer a {
     position: relative;
   }
 }
+
+/* width: 100%;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  margin-right: auto;
+  margin-left: auto; */
 
 /* @media (max-width: 830px) {
   .title {
