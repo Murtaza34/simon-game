@@ -18,9 +18,6 @@ body {
   letter-spacing: 8px;
   background: #e2e267;
   height: 100svh;
-  /* padding: 0 5rem; */
-  /* margin-left: auto;
-  margin-right: auto; */
 }
 
 .title {
@@ -46,9 +43,12 @@ body {
 .score-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin: 2rem 0 4rem;
 }
 
 .start-button {
+  position: absolute;
   text-transform: uppercase;
   max-width: 400px;
   font-size: 2.3rem;
@@ -60,7 +60,7 @@ body {
   border: none;
   border-radius: 7px;
   color: #fff;
-  background: #4F709C;
+  background: #4f709c;
   padding: 20px;
   transition: ease-in-out 0.1s;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -75,7 +75,15 @@ body {
   box-shadow: none;
 }
 
-.container {
+.display-score {
+  visibility: hidden;
+  font-size: 3rem;
+  letter-spacing: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.button-container {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
@@ -98,7 +106,7 @@ body {
     rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 
-.grid .item {
+.grid .btn {
   border: none;
   width: 100%;
   border-radius: 1rem;
@@ -108,37 +116,37 @@ body {
   user-select: none;
 }
 
-.grid .item:hover {
+.grid .btn:hover {
   cursor: pointer;
 }
-.grid .item:active {
+.grid .btn:active {
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
 }
 
-.item-green {
+.btn-green {
   background-color: #61b86c;
 }
 
-.item-green:hover {
+.btn-green:hover {
   background-color: #60c26d;
 }
-.item-red {
+.btn-red {
   background-color: #d85b5b;
 }
-.item-red:hover {
+.btn-red:hover {
   background-color: #f05f5f;
 }
-.item-blue {
+.btn-blue {
   background-color: #468beb;
 }
-.item-blue:hover {
-  background-color: #478df0;
+.btn-blue:hover {
+  background-color: #559bfc;
 }
-.item-yellow {
+.btn-yellow {
   background-color: #e6c236;
 }
-.item-yellow:hover {
+.btn-yellow:hover {
   background-color: #f0cb39;
 }
 
@@ -182,8 +190,16 @@ footer a {
     line-height: 3.3rem;
   }
 
+  .score-container {
+    margin: 0 0 3rem;
+  }
+
   .start-button {
-    font-size: 1.3rem;
+    font-size: 2rem;
+  }
+
+  .display-score {
+    font-size: 2rem;
   }
 
   .sub-heading {
@@ -199,7 +215,6 @@ footer a {
     padding: 1rem;
     margin-bottom: 7rem;
   }
-
 
   footer {
     position: relative;
