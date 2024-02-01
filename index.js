@@ -1,11 +1,9 @@
 $(document).ready(function () {
-  const computer_sequence = [];
+  let game_started = false;
+  let computer_sequence = [];
   let user_sequence = [];
   const button_colors = ["green", "red", "yellow", "blue"];
-  let game_started = false;
-  let game_over = false;
   let level = 0;
-  let high_score = 0;
 
   // -------------- Main game loop -------------- //
   $(document).on("click tap", "#start-button", function () {
@@ -34,16 +32,16 @@ $(document).ready(function () {
       $(`#${randomColor}`).fadeOut(100).fadeIn(80);
       play_Sound(randomColor);
     }, 500);
-    // console.log(computer_sequence);
+    // console.log(`Computer Seq: ${computer_sequence}`);
   }
 
   // users sequence order
   function get_user_input() {
-    $(".btn").on("click", function () {
+    $(".btn").on("click tap", function () {
       const userChosenColor = this.id;
       user_sequence.push(userChosenColor);
       play_Sound(userChosenColor);
-      // console.log(user_sequence);
+      // console.log(`User Seq: ${user_sequence}`);
       check_sequence(user_sequence.length - 1);
     });
   }
@@ -60,6 +58,22 @@ $(document).ready(function () {
           generate_sequence();
         }, 500);
       }
+    } else {
+      play_Sound("wrong");
+      $("body").css("background", "red");
+      setTimeout(() => {
+        $("body").css("background", "#e2e267");
+      }, 300);
+      $(".display-score").css("visibility", "hidden");
+      $(".start-button").css("visibility", "visible");
+      startOver();
     }
+  }
+
+  function startOver() {
+    level = 0;
+    computer_sequence = [];
+    user_sequence = [];
+    game_started = false;
   }
 });
